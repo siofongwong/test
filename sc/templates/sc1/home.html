@@ -1,0 +1,23 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>Welcome to SC homepage</title>
+    </head>
+
+    <body>
+        <p> {{ projects }}</p>
+        <!-- list of all projects -->
+        {% for o in some_list %}
+            <tr class="{% cycle 'row1' 'row2' %}">
+                ...
+            </tr>
+        {% endfor %}
+
+        <!-- create project button -->
+        <form action="/create_project/" method="post">
+            <input type="submit" value="create project">
+        </form>
+    </body>
+
+</html>

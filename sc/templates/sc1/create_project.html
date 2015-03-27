@@ -1,0 +1,19 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>Welcome to SC homepage</title>
+        <script src="{% static "sc1/createProject.js" %}"></script>
+    </head>
+
+    <body>
+        <form onsubmit="return createProject()" action="/save_project/" method="post">
+            <label for="title">Title: </label>
+            <input id="title" type="text" name="title" ><br><br>
+            <label for="git_link">GitHub Link: </label>
+            <input id="git_link" type="text" name="git_link" ><br><br>
+            <input type="submit" value="OK">
+        </form>
+    </body>
+
+</html>
